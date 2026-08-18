@@ -111,9 +111,17 @@ The output should indicate that the Jenkins service is `active (running)`.
 4. **Configure Jenkins**:
    - After setup, access the Jenkins dashboard to create jobs, configure pipelines, or install additional plugins via **Manage Jenkins > Manage Plugins**.
 
+condition: if we stop the EC2 instance and trying to login jenkins then public Ip got change then it will create problem to load the jenkins page. 
+so we need to update the below file with latest IP. 
+then restart the jenkins application as well.
+  
+  ```bash
+/var/lib/jenkins
+jenkins.model.JenkinsLocationConfiguration.xml
+  ```
 ## Basic Usage
 
-- **Create a Job**:
+-**Create a Job**:
   - From the Jenkins dashboard, click **New Item**, choose a job type (e.g., Freestyle project or Pipeline), and configure the job settings.
   - Link to a version control system (e.g., Git) and define build steps (e.g., shell commands, tests, or deployments).
 
