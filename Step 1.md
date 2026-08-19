@@ -65,6 +65,8 @@ echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
 ```
 
 # Update the package index and install Jenkins
+
+```bash
 sudo apt-get update
 sudo apt-get install jenkins
 ```
